@@ -1,0 +1,1019 @@
+{
+	"info": {
+		"_postman_id": "673b3db8-eb9e-4160-a386-efad2fcb662e",
+		"name": "project_hangouts",
+		"description": "Colección de querys de Postman para el proyecto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"jandroportonovo36@yopmail.com\",\n\t\"password\": \"Portonovo1993\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/users",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Create a new User"
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"jandroportonovo30@yopmail.com\",\n\t\"password\": \"Portonovo1993\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/users",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Get user for login"
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"jandroportonovo@yopmail.com\",\n\t\"password\": \"Portonovo1993\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/users/{{userId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"users",
+								"{{userId}}"
+							]
+						},
+						"description": "Delete a user"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints relationed witth account",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"jandroportonovo1@yopmail.com\",\n\t\"password\": \"Portonovo1993\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/auth",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"auth"
+							]
+						},
+						"description": "Crear una sesión de usuario"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Hangouts",
+			"item": [
+				{
+					"name": "hangouts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Maravilla\",\n\t\"thematic\": \"https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80\",\n\t\"description\": \"Venga chavales, vamos a quedar a tomar unas cañas y ver la mierda de JS\",\n\t\"address\" : \"Manuel Murguía, 7\",\n\t\"city\": \"5a3837fa-b4da-4550-b177-9c30c505cd52\",\n\t\"place\": \"La Consentida\",\n\t\"photo_url\": \"https://unsplash.com/photos/ZHvM3XIOHoE\",\n\t\"date\" : \"2024-10-25\",\n\t\"hour\": \"20:00:00\",\n\t\"capacity\": \"8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/hangouts",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"hangouts"
+							]
+						},
+						"description": "Create a hangout"
+					},
+					"response": []
+				},
+				{
+					"name": "hangouts",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Cañas en la de Rita\",\n\t\"thematic\": \"1680c313-c7af-497a-b05f-b376c773b038\",\n\t\"description\": \"Venga chavales, vamos al lío\",\n\t\"address\" : \"Manuel Murguía, 7\",\n\t\"city\": \"5a3837fa-b4da-4550-b177-9c30c505cd52\",\n\t\"place\": \"La Consentida\",\n\t\"photo_url\": \"https://unsplash.com/photos/ZHvM3XIOHoE\",\n\t\"date\" : \"2024-10-25\",\n\t\"hour\": \"20:00:00\",\n\t\"capacity\": \"8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/hangouts/{{hangoutId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"hangouts",
+								"{{hangoutId}}"
+							]
+						},
+						"description": "Update  hangout"
+					},
+					"response": []
+				},
+				{
+					"name": "hangouts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/hangouts",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"hangouts"
+							]
+						},
+						"description": "Get all hangouts"
+					},
+					"response": []
+				},
+				{
+					"name": "hangoutsQ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/hangouts/filter?city_id={{cityId}}&thematic_id={{thematicId}}&event_date1=2019-01-01&event_date2=2027-01-01",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"hangouts",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "city_id",
+									"value": "{{cityId}}"
+								},
+								{
+									"key": "thematic_id",
+									"value": "{{thematicId}}"
+								},
+								{
+									"key": "event_date1",
+									"value": "2019-01-01"
+								},
+								{
+									"key": "event_date2",
+									"value": "2027-01-01"
+								}
+							]
+						},
+						"description": "Get hangouts by query params"
+					},
+					"response": []
+				},
+				{
+					"name": "hangouts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/hangouts/{{hangoutId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"hangouts",
+								"{{hangoutId}}"
+							]
+						},
+						"description": "Get one hangout by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Organized hangouts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{Token}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/hangouts/organized/{{userId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"hangouts",
+								"organized",
+								"{{userId}}"
+							]
+						},
+						"description": "Get all hangouts organized by one user"
+					},
+					"response": []
+				},
+				{
+					"name": "hangouts",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/hangouts/{{hangoutId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"hangouts",
+								"{{hangoutId}}"
+							]
+						},
+						"description": "Delete one hangout. Only organizators can do this"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "profiles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n  \t\"age\":\"3\",\n  \t\"name\": \"Alejandro Jose Sergio\",\n  \t\"category\": \"Senior Tech Leader de la ostia\",\n  \t\"position\": \"Jefazo máximo del lugar y la galaxia\",\n  \t\"about\": \"Somos tres chavales que queremos derrocar la  República\",\n  \t\"link\": \"https://github.com/JandroCastro/project-techies-hangouts\"\n  }\n ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/profiles/{{userId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"profiles",
+								"{{userId}}"
+							]
+						},
+						"description": "modificate profile data"
+					},
+					"response": []
+				},
+				{
+					"name": "profiles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/profiles/{{userId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"profiles",
+								"{{userId}}"
+							]
+						},
+						"description": "modificate profile data"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Avatar",
+			"item": [
+				{
+					"name": "avatar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"value": "/home/hab42/project/project-techies-hangouts/www/app/docs/img/download.jpeg",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Homer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/profiles/avatar",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"profiles",
+								"avatar"
+							]
+						},
+						"description": "change profile avatar"
+					},
+					"response": []
+				},
+				{
+					"name": "avatar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}api/profiles/avatar/{{userId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"profiles",
+								"avatar",
+								"{{userId}}"
+							]
+						},
+						"description": "get profile avatar"
+					},
+					"response": []
+				}
+			],
+			"description": "Change profile avatar",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Ratings",
+			"item": [
+				{
+					"name": "Rating",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_rated\" : \"4028a2f4-00a7-4f0e-9fcb-985f743b7a76\",\n\t\"rating\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/rating/{{hangoutId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"rating",
+								"{{hangoutId}}"
+							]
+						},
+						"description": "Create Rating"
+					},
+					"response": []
+				},
+				{
+					"name": "Rating",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{Token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/rating/{{userId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"rating",
+								"{{userId}}"
+							]
+						},
+						"description": "Get Rating for an user"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "Cities",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer {{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/cities",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"cities"
+							]
+						},
+						"description": "get all cities"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Thematics",
+			"item": [
+				{
+					"name": "Thematics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": " Bearer {{Token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/thematics",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"thematics"
+							]
+						},
+						"description": "get all thematics"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "Attendance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{Token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/attendance/{{hangoutId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"attendance",
+								"{{hangoutId}}"
+							]
+						},
+						"description": "Anotarse a un evento"
+					},
+					"response": []
+				},
+				{
+					"name": "Attendance ok",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{Token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/attendance/accepted/{{hangoutId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"attendance",
+								"accepted",
+								"{{hangoutId}}"
+							]
+						},
+						"description": "Aceptar la petición de asistir a un evento"
+					},
+					"response": []
+				},
+				{
+					"name": "Attendance ko",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{Token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/attendance/rejected/{{hangoutId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"attendance",
+								"rejected",
+								"{{hangoutId}}"
+							]
+						},
+						"description": "Rechazar petición de asistencia a un evento"
+					},
+					"response": []
+				},
+				{
+					"name": "Attendance pending",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{Token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/attendance/pending/{{hangoutId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"attendance",
+								"pending",
+								"{{hangoutId}}"
+							]
+						},
+						"description": "Obtener listado de todas las peticiones de asistencia a evento pendientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all attendance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{Token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/attendance/{{userId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"attendance",
+								"{{userId}}"
+							]
+						},
+						"description": "Get all attendance from an user"
+					},
+					"response": []
+				},
+				{
+					"name": "Attendance accepted",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{Token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/attendance/accepted/{{hangoutId}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"attendance",
+								"accepted",
+								"{{hangoutId}}"
+							]
+						},
+						"description": "Obtener listado de todas las peticiones de asistencia a evento aceptadas"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
